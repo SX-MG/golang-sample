@@ -1,0 +1,13 @@
+database:
+  host: 192.168.122.12
+  port: 3306
+  username: golan
+  password: 123456
+  dbname: golan
+  timeout: 10s
+log:
+  level: traceLevel
+server:
+  port: 8088
+  debug: open
+  defaultPassword: 12345678

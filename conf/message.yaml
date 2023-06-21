@@ -1,0 +1,279 @@
+commonList:
+  common:
+    start:
+      nullable:
+        enab: true
+        failedStatus: -101
+        failedMsg: 参数start不能为空
+    limit:
+      nullable:
+        enab: true
+        failedStatus: -201
+        failedMsg: 参数limit不能为空
+    queryString:
+      nullable:
+        enab: false
+        failedStatus: -301
+        failedMsg: 参数queryString不能为空
+    orderField:
+      nullable:
+        enab: true
+        failedStatus: -401
+        failedMsg: 参数orderField不能为空
+    orderType:
+      nullable:
+        enab: true
+        failedStatus: -501
+        failedMsg: 参数lorderType不能为空
+
+adminUser:
+  addForm:
+    id:
+      nullable:
+        enab: false
+        failedStatus: -101
+        failedMsg: ID不能为空
+      num:
+        enab: false
+        failedStatus: -103
+        failedMsg: ID必须是数字
+    userName:
+      nullable:
+        enab: true
+        failedStatus: -201
+        failedMsg: 用户名不能为空
+      len:
+        enab: true
+        minLength: 1
+        maxLength: 10
+        failedStatus: -202
+        failedMsg: 用户名长度介于1-10位之间
+    realName:
+      nullable:
+        enab: true
+        failedStatus: -301
+        failedMsg: 姓名不能为空
+    password:
+      nullable:
+        enab: true
+        failedStatus: -401
+        failedMsg: 密码不能为空
+  updateForm:
+    id:
+      nullable:
+        enab: true
+        failedStatus: -101
+        failedMsg: ID不能为空
+      len:
+        enab: false
+        minLength: 1
+        maxLength: 10
+        failedStatus: -102
+        failedMsg: ID长度介于1-10位之间
+      num:
+        enab: true
+        failedStatus: -103
+        failedMsg: ID必须是数字
+    realName:
+      nullable:
+        enab: true
+        failedStatus: -201
+        failedMsg: 姓名不能为空
+  deleteForm:
+    ids:
+      nullable:
+        enab: true
+        failedStatus: -401
+        failedMsg: IDS不能为空
+  resetPasswordForm:
+    id:
+      nullable:
+        enab: true
+        failedStatus: -501
+        failedMsg: ID不能为空
+      len:
+        enab: false
+        minLength: 1
+        maxLength: 10
+        failedStatus: -502
+        failedMsg: ID长度介于1-10位之间
+      num:
+        enab: true
+        failedStatus: -503
+        failedMsg: ID必须是数字
+    oldPsd:
+      nullable:
+        enab: true
+        failedStatus: -504
+        failedMsg: 旧密码不能为空
+      len:
+        enab: true
+        minLength: 8
+        maxLength: 18
+        failedStatus: -505
+        failedMsg: 旧密码长度介于8-18位之间
+    newPsd:
+      nullable:
+        enab: false
+        failedStatus: -506
+        failedMsg: 新密码不能为空
+      len:
+        enab: false
+        minLength: 8
+        maxLength: 18
+        failedStatus: -507
+        failedMsg: 新密码长度介于8-18位之间
+  updatePasswordForm:
+    oldPsd:
+      nullable:
+        enab: true
+        failedStatus: -504
+        failedMsg: 旧密码不能为空
+      len:
+        enab: true
+        minLength: 8
+        maxLength: 18
+        failedStatus: -505
+        failedMsg: 旧密码长度介于8-18位之间
+    newPsd:
+      nullable:
+        enab: true
+        failedStatus: -506
+        failedMsg: 新密码不能为空
+      len:
+        enab: true
+        minLength: 8
+        maxLength: 18
+        failedStatus: -507
+        failedMsg: 新密码长度介于8-18位之间
+userLogin:
+  common:
+    userName:
+      nullable:
+        enab: true
+        failedStatus: -601
+        failedMsg: 用户名不能为空
+      len:
+        enab: true
+        minLength: 2
+        maxLength: 10
+        failedStatus: -602
+        failedMsg: 用户名长度介于8-18位之间
+    password:
+      nullable:
+        enab: true
+        failedStatus: -701
+        failedMsg: 用户名不能为空
+      len:
+        enab: true
+        minLength: 8
+        maxLength: 18
+        failedStatus: -702
+        failedMsg: 密码长度介于8-18位之间
+
+role:
+  addForm:
+    id:
+      nullable:
+        enab: false
+        failedStatus: -101
+        failedMsg: ID不能为空
+      num:
+        enab: false
+        failedStatus: -103
+        failedMsg: ID必须是数字
+    roleName:
+      nullable:
+        enab: true
+        failedStatus: -201
+        failedMsg: 角色名称不能为空
+      len:
+        enab: true
+        minLength: 1
+        maxLength: 10
+        failedStatus: -202
+        failedMsg: 角色名称长度介于1-10位之间
+    order:
+      nullable:
+        enab: true
+        failedStatus: -301
+        failedMsg: 排序值不能为空
+      num:
+        enab: true
+        failedStatus: -103
+        failedMsg: 排序值必须是数字
+      len:
+        enab: true
+        minLength: 1
+        maxLength: 10
+        failedStatus: -202
+        failedMsg: 排序值长度介于1-10位之间
+  updateForm:
+    id:
+      nullable:
+        enab: true
+        failedStatus: -101
+        failedMsg: ID不能为空
+      num:
+        enab: true
+        failedStatus: -103
+        failedMsg: ID必须是数字
+    roleName:
+      nullable:
+        enab: true
+        failedStatus: -201
+        failedMsg: 角色名称不能为空
+      len:
+        enab: true
+        minLength: 1
+        maxLength: 10
+        failedStatus: -202
+        failedMsg: 角色名称长度介于1-10位之间
+    order:
+      nullable:
+        enab: true
+        failedStatus: -301
+        failedMsg: 排序值不能为空
+      num:
+        enab: true
+        failedStatus: -103
+        failedMsg: 排序值必须是数字
+      len:
+        enab: true
+        minLength: 1
+        maxLength: 10
+        failedStatus: -202
+        failedMsg: 排序值长度介于1-10位之间
+  deleteForm:
+    ids:
+      nullable:
+        enab: true
+        failedStatus: -401
+        failedMsg: IDS不能为空
+  modifyRoleUserInfo:
+    roleId:
+      nullable:
+        enab: true
+        failedStatus: -501
+        failedMsg: ID不能为空
+      len:
+        enab: false
+        minLength: 1
+        maxLength: 10
+        failedStatus: -502
+        failedMsg: ID长度介于1-10位之间
+      num:
+        enab: true
+        failedStatus: -503
+        failedMsg: ID必须是数字
+    userIds:
+      nullable:
+        enab: true
+        failedStatus: -504
+        failedMsg: 用户ID序列不能为空
+      len:
+        enab: true
+        minLength: 1
+        maxLength: 200
+        failedStatus: -505
+        failedMsg: 用户ID序列介于8-200位之间
